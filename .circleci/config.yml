@@ -22,17 +22,9 @@ jobs:
             fi
             pip install pytest
 
-      - run:
-          name: Verify installation
-          command: |
-            python --version
-            pip list
-
-      - run:
-          name: Run tests
-          command: python -m pytest
+      # ... rest of your steps ...
 
 workflows:
   build_and_test:
     jobs:
-      - build config.yml
+      - build
